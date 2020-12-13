@@ -17,6 +17,7 @@
     --navLinkHoverBg: var(--paleSpringBud);
     --mainBg: var(--goldCrayola);
     --fontColor: var(--black);
+    --themeSwitchColor: var(--goldCrayola);
 }
 
 .dark-theme {
@@ -26,6 +27,7 @@
     --navLinkHoverBg: var(--msuGreen);
     --mainBg: var(--msuGreen);
     --fontColor: var(--white);
+    --themeSwitchColor: var(--msuGreen);
 }
 
 * {
@@ -70,7 +72,7 @@ body {
 }
 
 .slider {
-    background-color: #999;
+    background-color: var(--themeSwitchColor);
     transition: 0.4s;
     border-radius: 3.4rem;
     height: 1.2rem;
