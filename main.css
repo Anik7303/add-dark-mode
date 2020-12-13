@@ -1,11 +1,38 @@
 :root {
     --navHeight: 7rem;
+    --sage: #d2cca1;
+    --paleSpringBud: #dedaba;
+    --goldCrayola: #e5c687;
+    --richBlackForeground: #0f1a20;
+    --white: #f8f8f8;
+    --black: #222;
+    --msuGreen: #2d4739;
+    --gray: #eee;
+}
+
+.light-theme {
+    --themeDropDownBg: var(--goldCrayola);
+    --themeIconBorderColor: var(--sage);
+    --navBg: var(--sage);
+    --navLinkHoverBg: var(--paleSpringBud);
+    --mainBg: var(--goldCrayola);
+    --fontColor: var(--black);
+}
+
+.dark-theme {
+    --themeDropDownBg: var(--msuGreen);
+    --themeIconBorderColor: var(--richBlackForeground);
+    --navBg: var(--richBlackForeground);
+    --navLinkHoverBg: var(--msuGreen);
+    --mainBg: var(--msuGreen);
+    --fontColor: var(--white);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    color: var(--fontColor);
 }
 
 html {
@@ -57,10 +84,11 @@ input:checked + .slider {
 }
 
 nav {
-    background: #d2cca1;
+    background: var(--navBg);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     position: relative;
+    transition: background-color 0.6s ease, color 1s ease;
 }
 
 nav ul {
@@ -79,10 +107,11 @@ nav ul li {
     transition: background 0.3s ease;
     border-radius: 4px;
     position: relative;
+    transition: background-color 0.6s ease, color 1s ease;
 }
 
 nav ul li:hover {
-    background-color: #dedaba;
+    background-color: var(--navLinkHoverBg);
 }
 
 main {
@@ -90,6 +119,7 @@ main {
     align-items: center;
     justify-content: center;
     font-size: 3.5rem;
-    background: #e5c687;
+    background: var(--mainBg);
     height: calc(100vh - var(--navHeight));
+    transition: background-color 0.6s ease, color 1s ease;
 }
